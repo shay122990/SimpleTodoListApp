@@ -134,11 +134,6 @@ app.post("/delete", function(req, res){
 });
 
 //Local and heroku server set up//
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 3000;
-}
-
-app.listen(port, function() {
-  console.log("Server has started successfully");
+app.listen(process.env.PORT || 3000, function() {
+  console.log("Server successfully started");
 });
